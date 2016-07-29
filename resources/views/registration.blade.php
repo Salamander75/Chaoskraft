@@ -10,6 +10,15 @@
 <body>
     <div class="container">
         <div class="content">
+            @if (count($errors) > 0)
+                <div id="error-messages">
+                    <ul>
+                        @foreach($errors->all() as $error)
+                            <li> {{ $error }} </li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
             <form method="post" action="{{ route('registrate') }}">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username"/>
