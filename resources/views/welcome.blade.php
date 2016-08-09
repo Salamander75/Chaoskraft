@@ -39,7 +39,35 @@
         <div class="container">
             <div class="content">
                 <div class="title">Laravel 5</div>
+                <a href="{{ route('registration') }}">Registrate</a>
             </div>
+            @if (count($errors) > 0)
+                <div id="error-messages">
+                    <ul>
+                        @foreach($errors->all() as $error)
+                            <li> {{ $error }} </li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+            @if (Session::has('fail'))
+                <div id="error-messages">
+                    {{ Session::get('fail') }}
+                </div>
+            @endif
+            <form method="post" action="auth/login">
+                <div>
+                    Email
+                    <input type="email" name="email" id="email">
+                </div>
+                <div>
+                    Password
+                    <input type="password" name="password" id="password">
+                </div>
+                <input type="hidden" name="_token" value="{{ Session::token() }}">
+                <button type="submit">Login</button>
+
+            </form>
         </div>
     </body>
 </html>
