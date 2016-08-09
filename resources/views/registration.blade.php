@@ -19,6 +19,9 @@
                     </ul>
                 </div>
             @endif
+            @if (isset($success))
+                <h2><?php echo $success ?></h2>
+            @endif
             <form method="post" action="{{ route('registrate') }}">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username"/>

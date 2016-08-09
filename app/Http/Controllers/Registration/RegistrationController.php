@@ -14,10 +14,9 @@ use App\Services\RegistrationService\RegistrationService;
 class RegistrationController extends Controller{
 
     public function processRegistrationRequest(Request $request){
-
         $this->validateRegistrationData($request);
         $this->addNewUser($request);
-        return view('registration');
+        return view('registration', ['success' => 'Registration successful!']);
     }
 
 
