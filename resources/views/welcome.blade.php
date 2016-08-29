@@ -64,7 +64,7 @@
                     Password
                     <input type="password" name="password" id="password">
                 </div>
-                <input type="hidden" name="_token" value="{{ Session::token() }}">
+                <input type="hidden" name="_token" value="{{ csrf_token()}}">
                 <button type="submit">Login</button>
 
             </form>
