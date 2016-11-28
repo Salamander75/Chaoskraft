@@ -13,13 +13,14 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-4" id="map">
+            <img src="{{URL::asset('/image/map.jpg')}}" id="warMap" alt="Problem loading image..." height="400" width="400">
             <h3>Column 2</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
         </div>
-        <div class="col-sm-4">
-            <label for="commandPost">Commandpost</label>
+        <div class="col-sm-4" id="orders">
+            <label id="commandPostLabel" for="commandPost">Commandpost</label>
             <textarea id="commandPost" name="commandPost" rows="20" cols="25" ><?php $len = count($userGameData); $counter = 1;
                 foreach($userGameData as $item)
                 {
@@ -29,7 +30,7 @@
                     $counter++;
                 }
                 ?></textarea>
-            <button id="commandSubmit" name="commandSubmit">Submit commmands!</button>
+            <button id="commandSubmit" name="commandSubmit">Submit commmands</button>
         </div>
     </div>
 </div>

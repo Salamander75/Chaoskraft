@@ -13,7 +13,7 @@ class CreateUserCommandsTable extends Migration
     public function up()
     {
         Schema::create('user_commands', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('ucmd_id');
             $table->integer('user_id')->unsigned();
             $table->string('command',100);
             $table->timestamps();
